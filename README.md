@@ -1,1 +1,2 @@
 # dataStructuresAndAlgorithmInJavascript
+This repository is created to enhance my algorithmic skills in JavaScript. I expect to learn and understand the basics of JS clearly by the end of this repository.
