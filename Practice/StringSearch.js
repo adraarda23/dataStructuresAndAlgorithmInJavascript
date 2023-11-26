@@ -10,4 +10,33 @@ function naiveSearch(long, short){
 }
 
 var returnValue =naiveSearch("kol tol bol dol yoloblodlolasdoasda", "lod");
-console.log(returnValue);
+//console.log(returnValue);
+
+function slidingSearch(long,short){
+    var startingPoint=0;
+    var head=0;
+    var endPoint=long.length-1;
+    var wordCount=0;
+    var keyCount=0;
+    var shortLength=short.length;
+    while(startingPoint<endPoint){
+        if(keyCount===shortLength){
+            keyCount=0;
+            wordCount++;
+            startingPoint=head;
+        }
+        if(long[head]==short[keyCount]){
+            head++;
+            keyCount++;
+        }
+        else{
+            startingPoint++;
+            head=startingPoint;
+            keyCount=0;
+        }
+
+    }
+    return wordCount;
+}
+var testValue = slidingSearch("gegegelge","gel");
+//console.log(testValue);
